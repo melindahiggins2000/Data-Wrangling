@@ -1,0 +1,9 @@
+cntl shift c - add comments
+
+cntrl-L clear console
+
+dput(colnames(mtcars))
+
+shift alt g - go to line
+
+https://github.com/RobStilson?tab=repositories

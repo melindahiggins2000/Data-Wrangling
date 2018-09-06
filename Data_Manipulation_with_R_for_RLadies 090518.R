@@ -89,6 +89,8 @@ str(mtcars)
 #And column names
 colnames(mtcars)
 
+dput(colnames(mtcars))
+
 #And glimpse
 glimpse(mtcars)
 
@@ -146,7 +148,7 @@ slice(mtcars, 1:10)
 
 slice(mtcars, 30:32)
 
-#arrange
+#arrange - this sorting columns
 head(arrange(mtcars, mpg, cyl, disp, hp))
 
 #What about descending order?
@@ -402,12 +404,16 @@ unite(df_sep, new_joined_col, ABC, XYZ, sep = "---")
 # 3          b---y
 # 4          c---z
 
+# aaaaaa - shift cntrl c add a comment
+
 #Writing to Excel
 #From: http://www.sthda.com/english/wiki/r-xlsx-package-a-quick-start-guide-to-manipulate-excel-files-in-r
 
 library(xlsx)
 
-write.xlsx(stocks_melt, "Y:\\Research and Development\\Rob S Archive\\R Stuff\\R Classes for LM\\My_stocks_data.xlsx", row.names = FALSE, col.names = TRUE, append = FALSE, sheetName = "Melted")
+write.xlsx(stocks_melt, "My_stocks_data.xlsx", 
+           row.names = FALSE, col.names = TRUE, 
+           append = FALSE, sheetName = "Melted")
 
 #Lets write another one
 write.xlsx(stocks_cast, "Y:\\Research and Development\\Rob S Archive\\R Stuff\\R Classes for LM\\My_stocks_data.xlsx", row.names = FALSE, col.names = TRUE, append = TRUE, sheetName = "Cast")
